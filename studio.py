@@ -18,9 +18,13 @@ def fscan(filename):
     """Scan in file as a dictionary"""
     f = open(filename, "r")
     searchlines = f.readlines()
+    d = {}
     f.close()
     for line in searchlines:
     	print line
+	#line = line.split(",")
+        #d[line[5]] = 
+        #print d
     pass
 
 if __name__ == '__main__':
