@@ -25,6 +25,7 @@ def get_state(uni_name):
    pass
 
 def fscan(filename):
+<<<<<<< HEAD
    """Scan in file as a dictionary"""
    f = open(filename, "r")
    searchlines = f.readlines()
@@ -37,6 +38,19 @@ def fscan(filename):
       d[line[5]] = [line[6],int(tuition)]
 #   print d
    pass
+=======
+    """Scan in file as a dictionary"""
+    f = open(filename, "r")
+    searchlines = f.readlines()
+    f.close()
+    d = {}
+    for line in searchlines:
+#        print line
+        line = line.split(",")
+        d[line[5]] = [line[6],line[7]+line[8]]
+    #print d
+    pass
+>>>>>>> origin/vanessa
 
 if __name__ == '__main__':
    sys.exit(main()) 
