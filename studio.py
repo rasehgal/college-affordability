@@ -21,10 +21,10 @@ def fscan(filename):
     d = {}
     f.close()
     for line in searchlines:
-    	print line
-	#line = line.split(",")
-        #d[line[5]] = 
-        #print d
+    	#print line
+        line = line.split(",")
+        d[line[0]] = str(line.pop()).replace("\r\n","")
+    print d
     pass
 
 if __name__ == '__main__':
