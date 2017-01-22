@@ -1,7 +1,7 @@
 """Functions for studio.csv, take in city and spit out most recent rent/mo"""
 import sys
 
-filename = "studio.csv"
+filename = "unicity.csv"
 
 
 def main():
@@ -21,11 +21,13 @@ def fscan(filename):
     d = {}
     f.close()
     for line in searchlines:
-    	#print line
+        #print line
         line = line.split(",")
-        d[line[0]] = str(line.pop()).replace("\r\n","")
-    #print d
+        d[line[1]] = line[3] #str(line.pop()).replace("\r\n","")
+    print d
     pass
 
 if __name__ == '__main__':
     sys.exit(main())
+
+
